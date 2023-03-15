@@ -1,0 +1,15 @@
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\bin\Debug\net7.0\TaylorSeries.exe
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\bin\Debug\net7.0\TaylorSeries.deps.json
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\bin\Debug\net7.0\TaylorSeries.runtimeconfig.json
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\bin\Debug\net7.0\TaylorSeries.dll
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\bin\Debug\net7.0\TaylorSeries.pdb
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.csproj.AssemblyReference.cache
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.AssemblyInfoInputs.cache
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.AssemblyInfo.cs
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.csproj.CoreCompileInputs.cache
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.dll
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\refint\TaylorSeries.dll
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.pdb
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\TaylorSeries.genruntimeconfig.cache
+C:\Users\kneiv\RiderProjects\PSM-2023\TaylorSeries\obj\Debug\net7.0\ref\TaylorSeries.dll
