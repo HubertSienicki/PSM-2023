@@ -26,7 +26,7 @@ def improved_euler(y, dt, func):
     k2 = dt * func(y + 0.5 * k1)
     return y + k2
 
-t_total = 3.154e7
+t_total = 365*60*24*10
 dt = 3600
 
 x_e0, y_e0 = R_earth, 0
