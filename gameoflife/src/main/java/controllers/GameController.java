@@ -12,5 +12,9 @@ public class GameController {
         this.frame = frame;
     }
 
+    public void startGame(){
+        frame.drawGrid(grid.getRows(), grid.getCols());
+    }
+
 
 }
