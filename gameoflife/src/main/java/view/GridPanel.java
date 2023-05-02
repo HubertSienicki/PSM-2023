@@ -1,15 +1,18 @@
 package view;
 
+import model.grid.Grid;
+import org.jetbrains.annotations.NotNull;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class GridPanel extends JPanel {
     int rows;
-    int cols;
+    private Grid grid;
 
-    public GridPanel(int rows, int cols) {
-        this.rows = rows;
-        this.cols = cols;
+    public GridPanel(@NotNull Grid grid) {
+        this.grid = grid;
+        this.rows = grid.getRows();
     }
 
     @Override
@@ -30,7 +33,7 @@ public class GridPanel extends JPanel {
         int xOffset = (panelWidth - panelSize) / 2;
         int yOffset = (panelHeight - panelSize) / 2;
 
-        g.setColor(Color.BLACK);
+        g.setColor(Color.gray);
 
         for (int i = 0; i <= rows; i++) {
             int x = Math.round(cellSize * i);
@@ -41,6 +44,15 @@ public class GridPanel extends JPanel {
             } else {
                 g.drawLine(xOffset + x, yOffset, xOffset + x, yOffset + panelSize + 1);
                 g.drawLine(xOffset, yOffset + y, xOffset + panelSize + 1, yOffset + y);
+            }
+        }
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < rows; j++) {
+                if (grid.getCellGrid()[i][j] != null) {
+                    g.setColor(Color.magenta);
+                    g.fillRect(Math.round(xOffset + i * cellSize) + 1, Math.round(yOffset + j * cellSize) + 1, Math.round(cellSize) - 1, Math.round(cellSize) - 1);
+                }
             }
         }
     }

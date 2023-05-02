@@ -1,4 +1,5 @@
 package model.grid;
+
 import model.cell.Cell;
 
 public class Grid {
@@ -12,7 +13,7 @@ public class Grid {
         cellGrid = new Cell[rows][cols];
     }
 
-    public void addCell(int posX, int posY){
+    public void addCell(int posX, int posY) {
         cellGrid[posX][posY] = new Cell(posX, posY);
     }
 

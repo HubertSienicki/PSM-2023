@@ -2,7 +2,7 @@ package model.cell;
 
 import model.cell.cellposition.CellPosition;
 
-public class Cell extends CellPosition{
+public class Cell extends CellPosition {
     private boolean isAlive;
 
     public Cell(int posX, int posY) {
@@ -10,7 +10,7 @@ public class Cell extends CellPosition{
         this.isAlive = true;
     }
 
-    public void die(){
+    public void die() {
         this.isAlive = false;
     }
 }
