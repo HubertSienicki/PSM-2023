@@ -3,7 +3,8 @@ package view;
 import javax.swing.*;
 
 public class ViewFrame extends JFrame {
-    private JFrame frame;
+    private final JFrame frame;
+    private GridPanel gridPanel;
 
     public ViewFrame() {
         frame = new JFrame();
@@ -17,7 +18,17 @@ public class ViewFrame extends JFrame {
         frame.setVisible(true);
     }
 
-    public void drawGrid(int rows, int cols){
-        frame.add(new GridPane(rows, cols));
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public GridPanel getGridPane() {
+        return gridPanel;
+    }
+
+    public void setGridPane(GridPanel gridPanel) {
+        this.gridPanel = gridPanel;
+        frame.add(gridPanel);
+        frame.pack();
     }
 }

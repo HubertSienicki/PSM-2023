@@ -3,14 +3,15 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-public class GridPane extends JPanel {
+public class GridPanel extends JPanel {
     int rows;
     int cols;
 
-    public GridPane(int rows, int cols) {
+    public GridPanel(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
     }
+
     @Override
     public Dimension getPreferredSize() {
         return new Dimension(1000, 1000);

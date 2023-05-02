@@ -1,5 +1,5 @@
 import controllers.GameController;
-import grid.Grid;
+import model.grid.Grid;
 import view.ViewFrame;
 
 public class Main {
@@ -8,6 +8,8 @@ public class Main {
         ViewFrame viewFrame = new ViewFrame();
 
         GameController controller = new GameController(grid, viewFrame);
+
+        grid.addCell(100,100);
 
         controller.startGame();
     }

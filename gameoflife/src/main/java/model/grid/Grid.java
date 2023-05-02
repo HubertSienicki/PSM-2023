@@ -1,6 +1,5 @@
-package grid;
-
-import cell.Cell;
+package model.grid;
+import model.cell.Cell;
 
 public class Grid {
     private int rows;
@@ -11,6 +10,10 @@ public class Grid {
         this.rows = rows;
         this.cols = cols;
         cellGrid = new Cell[rows][cols];
+    }
+
+    public void addCell(int posX, int posY){
+        cellGrid[posX][posY] = new Cell(posX, posY);
     }
 
     public int getRows() {

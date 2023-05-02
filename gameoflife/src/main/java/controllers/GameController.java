@@ -1,6 +1,7 @@
 package controllers;
 
-import grid.Grid;
+import model.grid.Grid;
+import view.GridPanel;
 import view.ViewFrame;
 
 public class GameController {
@@ -13,8 +14,9 @@ public class GameController {
     }
 
     public void startGame(){
-        frame.drawGrid(grid.getRows(), grid.getCols());
+        drawGrid(grid.getRows(), grid.getCols());
     }
-
-
+    private void drawGrid(int rows, int cols){
+        frame.setGridPane(new GridPanel(rows, cols));
+    }
 }

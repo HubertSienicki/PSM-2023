@@ -1,10 +1,12 @@
-package cell.cellposition;
+package model.cell.cellposition;
 
 public class CellPosition {
     private int posX;
     private int posY;
 
-    public CellPosition() {
+    public CellPosition(int posX, int posY) {
+        this.posX = posX;
+        this.posY = posY;
     }
 
     public int getPosX() {
