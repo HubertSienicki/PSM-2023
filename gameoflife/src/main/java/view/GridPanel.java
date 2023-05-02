@@ -1,10 +1,13 @@
 package view;
 
+import model.cell.Cell;
 import model.grid.Grid;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class GridPanel extends JPanel {
     int rows;
@@ -13,6 +16,30 @@ public class GridPanel extends JPanel {
     public GridPanel(@NotNull Grid grid) {
         this.grid = grid;
         this.rows = grid.getRows();
+
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                int panelWidth = getWidth();
+                int panelHeight = getHeight();
+                int panelSize = Math.min(panelWidth, panelHeight);
+
+                int xOffset = (panelWidth - panelSize) / 2;
+                int yOffset = (panelHeight - panelSize) / 2;
+
+                if(e.getX() >= xOffset && e.getX() <= xOffset + panelSize
+                && e.getY() >= yOffset && e.getY() <= yOffset + panelSize){
+                    float cellSize = (float) panelSize / rows;
+                    int i = (int) ((e.getX() - xOffset) / cellSize);
+                    int j = (int) ((e.getY() - yOffset) / cellSize);
+
+                    if(grid.getCellGrid()[i][j] == null){
+                        grid.getCellGrid()[i][j] = new Cell(i, j);
+                        repaint();
+                    }
+                }
+            }
+        });
     }
 
     @Override
