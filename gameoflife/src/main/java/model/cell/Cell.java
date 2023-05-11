@@ -1,16 +1,29 @@
 package model.cell;
 
-import model.cell.cellposition.CellPosition;
-
-public class Cell extends CellPosition {
+public class Cell{
+    private int posX;
+    private int posY;
     private boolean isAlive;
 
     public Cell(int posX, int posY) {
-        super(posX, posY);
-        this.isAlive = true;
+        this.posX = posX;
+        this.posY = posY;
+        this.isAlive = false;
     }
 
-    public void die() {
-        this.isAlive = false;
+    public boolean isAlive(){
+        return isAlive;
+    }
+
+    public void setAlive(boolean isAlive){
+        this.isAlive = isAlive;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
     }
 }

@@ -3,29 +3,35 @@ package model.grid;
 import model.cell.Cell;
 
 public class Grid {
-    private int rows;
-    private int cols;
-    private Cell[][] cellGrid;
 
+    private Cell[][] grid;
     public Grid(int rows, int cols) {
-        this.rows = rows;
-        this.cols = cols;
-        cellGrid = new Cell[rows][cols];
+        grid = new Cell[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                grid[i][j] = new Cell(i,j);
+            }
+        }
     }
 
-    public void addCell(int posX, int posY) {
-        cellGrid[posX][posY] = new Cell(posX, posY);
+    public void setAlive(int x, int y, boolean isAlive){
+        grid[x][y].setAlive(isAlive);
     }
 
-    public int getRows() {
-        return rows;
+    public boolean isAlive(int x, int y){
+        return grid[x][y].isAlive();
     }
 
-    public int getCols() {
-        return cols;
+    public Cell getCell(int x, int y){
+        return grid[x][y];
     }
 
-    public Cell[][] getCellGrid() {
-        return cellGrid;
+    public int getRows(){
+        return grid.length;
+    }
+
+    public int getCols(){
+        return grid[0].length;
     }
 }

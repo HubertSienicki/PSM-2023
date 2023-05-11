@@ -1,25 +1,26 @@
 import controllers.GameController;
 import model.grid.Grid;
-import view.ViewFrame;
+import view.GridView;
+
+import javax.swing.*;
 
 public class Main {
+
     public static void main(String[] args) {
-        Grid grid = new Grid(200, 200);
-        ViewFrame viewFrame = new ViewFrame();
+        int rows = 100;
+        int cols = 100;
 
-        GameController controller = new GameController(grid, viewFrame);
+        Grid grid = new Grid(rows, cols);
+        GridView gridView = new GridView(grid, 10);
+        GameController gameController = new GameController(grid, gridView);
 
-        // test for cell drawing
-//        grid.addCell(100,100);
-//        grid.addCell(101,101);
-//        grid.addCell(102,102);
-//        grid.addCell(103,103);
-//        grid.addCell(104,104);
-//        grid.addCell(105,105);
-//        grid.addCell(106,106);
-//        grid.addCell(107,107);
+        JFrame frame = new JFrame("Game of Life");
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.getContentPane().add(gridView);
+        frame.pack();
+        frame.setVisible(true);
 
+        gameController.startGame();
 
-        controller.startGame();
     }
 }
